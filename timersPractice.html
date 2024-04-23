@@ -16,7 +16,7 @@
                 <li>Purple</li>
                 <li>Green</li>
                 <li>Pink</li>
-                <li>Mouth of Truth</li>
+                <li>Red</li>
             </ul>
         </div>
     </div>
@@ -33,14 +33,13 @@
     });
 
     const colorButton = document.getElementById('colorSelect');
-    const randomColor = ["Blue", "Purple", "Green", "Pink", "Red"];
+    const randomColor = ["#a4beeb", "#6592bf", "#647d54", "#faebf9", "#591510"];
     const color = randomColor[Math.floor(Math.random() * randomColor.length)];
 
     colorButton.addEventListener('click', function(){
-        function getColor(){
+        setTimeout(function(){
             document.body.style.backgroundColor = color;
-        }
-        setInterval(getColor, 5000);
+        }, 1000);
     })
 </script>
 </body>
