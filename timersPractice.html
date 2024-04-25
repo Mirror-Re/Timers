@@ -34,10 +34,11 @@
 
     const colorButton = document.getElementById('colorSelect');
     const randomColor = ["#a4beeb", "#6592bf", "#647d54", "#faebf9", "#591510"];
-    const color = randomColor[Math.floor(Math.random() * randomColor.length)];
+    let color = randomColor[Math.floor(Math.random() * randomColor.length)];
 
     colorButton.addEventListener('click', function(){
         setTimeout(function(){
+            color = randomColor[Math.floor(Math.random() * randomColor.length)];
             document.body.style.backgroundColor = color;
         }, 1000);
     })
